@@ -3,6 +3,8 @@
 ## Overview
 This project implements a player tracking system for sports videos, utilizing two synchronized camera perspectives: a broadcast view and a tactical (tacticam) view. The system leverages a custom-trained YOLOv11 model for object detection and an improved DeepSORT algorithm for multi-object tracking, with appearance-based matching to map player identities across the two camera views.
 
+It is not able to correctly map players between cross cameras but that is the scope for future improcement with the help of your guidance. 
+
 ## Features
 - **Object Detection**: Uses a custom-trained YOLOv11 model (`best.pt`) to detect players in video frames.
 - **Multi-Object Tracking**: Employs DeepSORT with enhanced feature extraction (OSNet or color histogram fallback) to track players across frames.
@@ -85,5 +87,6 @@ This project implements a player tracking system for sports videos, utilizing tw
 
 ## Future Improvements
 - Add team classification based on more robust color analysis.
+- Better mappings
 - Implement real-time processing optimizations.
 - Support dynamic frame offset detection for unsynchronized videos.
